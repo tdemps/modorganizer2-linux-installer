@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Add MO2 required winetricks to game_protontricks.
-game_protontricks=("arial" "fontsmooth=rgb" "${game_protontricks[@]}")
+game_protontricks=("fontsmooth=rgb" "${game_protontricks[@]}")
 
 do_wineprefix_work() {
 	case "$game_launcher" in

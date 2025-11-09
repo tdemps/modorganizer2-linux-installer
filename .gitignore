@@ -5,7 +5,6 @@
 *.log
 
 /steam-redirector/main
-/steam-redirector/main*.exe
 
 /*.tar.gz
 

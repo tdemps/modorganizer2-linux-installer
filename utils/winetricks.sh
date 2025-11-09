@@ -27,7 +27,7 @@ function get_release() {
 
 function do_winetricks() {
 	release=$(get_release)
-
+	>&2 echo "running winetricks $*"
 	case "$release" in
 	downloaded)
 		"$executable_winetricks" --force "$@"
@@ -35,7 +35,7 @@ function do_winetricks() {
 		;;
 	flatpak)
 		WINETRICKS='' \
-			flatpak run --command=winetricks 'com.github.Matoking.protontricks' --force "$@"
+			flatpak run --command=winetricks 'com.github.Matoking.protontricks' --verbose --force "$@"
 		return
 		;;
 	system)

@@ -23,6 +23,7 @@ function get_release() {
 function do_protontricks() {
 	release=$(get_release)
 
+	>&2 echo "running prorontricks $*"
 	case "$release" in
 		flatpak)
 			WINETRICKS='' \
